@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<!-- FONT AWESOME -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+<link rel="stylesheet" href="index.css">
+<link rel="stylesheet" href="./scss/style.scss">
+<link rel="stylesheet" href="./css/style.css">
+<link rel="stylesheet" href="./css/style.css.map">
+<body>
+     <nav class="navbar">
+
+        <div class="nav-container">
+
+            <!-- LOGO -->
+
+            <a href="index.html" class="logo">
+                Apex <span>Tech</span>
+            </a>
+
+            <!-- NAV LINKS -->
+
+            <ul class="nav-links" id="navLinks">
+
+                <li><a href="#">Home</a></li>
+
+                <li><a href="#">Services</a></li>
+
+                <li><a href="#">About Us</a></li>
+
+                <li><a href="#">Contact</a></li>
+
+                <li>
+                    <a href="#" class="nav-btn">
+                        Get Started
+                    </a>
+                </li>
+
+            </ul>
+
+            <!-- TOGGLE BUTTON -->
+
+            <div class="toggle-btn" id="toggleBtn">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+
+        </div>
+
+    </nav>
+    <center>
+    <h1>Interface Segregation Principle</h1>
+               
+    </center style="margin-top: 50px;color: white;font-family: Arial, sans-serif;">
+    <p style="margin-top: 50px;color: white;font-family: Arial, sans-serif;">The Interface Segregation Principle (ISP) is one of the SOLID principles of object-oriented design. It states that clients should not be forced to depend on interfaces they do not use. In other words, a class should not be required to implement interfaces that it does not need.</p>
+    <p style="margin-top: 50px;color: white;font-family: Arial, sans-serif;">By adhering to the ISP, developers can create more modular and maintainable code. It encourages the creation of smaller, more focused interfaces that are easier to understand and implement. This leads to better separation of concerns and promotes code reusability.</p>
+    
+    <footer class="footer">
+
+        <!-- ANIMATED GLOW -->
+
+        <div class="footer-glow footer-glow-1"></div>
+        <div class="footer-glow footer-glow-2"></div>
+
+        <div class="footer-container">
+
+            <!-- COMPANY INFO -->
+
+            <div class="footer-box">
+
+                <h2 class="footer-logo">
+                    APEX TECH
+                    <span>Management</span>
+                </h2>
+
+                <p class="footer-text">
+                    Delivering modern IT infrastructure,
+                    cybersecurity, cloud solutions,
+                    and enterprise technology services
+                    for businesses & residential clients.
+                </p>
+
+            </div>
+
+            <!-- QUICK LINKS -->
+
+            <div class="footer-box">
+
+                <h3>Quick Links</h3>
+
+                <ul class="footer-links">
+
+                    <li><a href="#">Home</a></li>
+
+                    <li><a href="#">Services</a></li>
+
+                    <li><a href="#">About Us</a></li>
+
+                    <li><a href="#">Contact</a></li>
+
+                </ul>
+
+            </div>
+
+            <!-- SERVICES -->
+
+            <div class="footer-box">
+
+                <h3>Services</h3>
+
+                <ul class="footer-links">
+
+                    <li><a href="#">IT Support</a></li>
+
+                    <li><a href="#">Cloud Solutions</a></li>
+
+                    <li><a href="#">Cyber Security</a></li>
+
+                    <li><a href="#">Network Setup</a></li>
+
+                </ul>
+
+            </div>
+
+            <!-- CONTACT -->
+
+            <div class="footer-box">
+
+                <h3>Contact Info</h3>
+
+                <div class="footer-contact">
+
+                    <p>
+                        <i class="fa-solid fa-envelope"></i>
+                        apextechmanagement@gmail.com
+                    </p>
+
+                    <p>
+                        <i class="fa-solid fa-phone"></i>
+                        +1 (469) 367-3978
+                    </p>
+
+                </div>
+
+                <!-- SOCIAL ICONS -->
+
+                <div class="social-icons">
+
+                    <a href="#">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+
+                    <a href="#">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+
+                    <a href="#">
+                        <i class="fa-brands fa-linkedin-in"></i>
+                    </a>
+
+                    <a href="#">
+                        <i class="fa-brands fa-x-twitter"></i>
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- COPYRIGHT -->
+
+        <div class="footer-bottom">
+
+            <p>
+                © 2026 APEX TECH Management.
+                All Rights Reserved.
+            </p>
+
+        </div>
+
+    </footer>
+    <script>
+        const scrollBtn = document.getElementById("scrollBtn");
+
+        // Show button when scrolling down
+        window.addEventListener("scroll", () => {
+            if (window.scrollY > 300) {
+                scrollBtn.style.display = "block";
+            } else {
+                scrollBtn.style.display = "none";
+            }
+        });
+
+        // Scroll to top
+        scrollBtn.addEventListener("click", () => {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+        });
+        const observer = new IntersectionObserver((entries) => {
+
+            entries.forEach((entry) => {
+
+                if (entry.isIntersecting) {
+
+                    entry.target.classList.add("show");
+
+                }
+
+            });
+
+        });
+
+        const hiddenElements =
+            document.querySelectorAll(".hidden");
+
+        hiddenElements.forEach((el) =>
+            observer.observe(el));
+
+
+
+
+        const toggleBtn = document.getElementById("toggleBtn");
+        const navLinks = document.getElementById("navLinks");
+
+        toggleBtn.addEventListener("click", () => {
+
+            navLinks.classList.toggle("active");
+
+        });
+
+    </script>
+</body>
+</html>
